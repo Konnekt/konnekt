@@ -57,6 +57,4 @@ Kod udostępniony jest na licencji Mozilla (MPL). Jej treść znajdziecie w plik
 
 ## Disclaimer
 
-This is a legacy project published mainly for amusement and for self maintenance for those, that are still using the Konnekt IM.
-It's terribly outdated, and was never designed with open source in mind.
-
+This is a legacy project, published mainly for amusement. And partly for those, that are still using the Konnekt IM. It's terribly outdated, and was never designed for open source . Keep this in mind, please.
