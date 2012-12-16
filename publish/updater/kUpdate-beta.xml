@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1250"?> 
+<data>
+	<info>
+		<date>2004-03-13</date>
+		<table>0</table>
+		<owner>www.konnekt.info</owner>
+		<version exPiMP="1.1.1.0" konnekt="0.6.19.109" />
+		<comment>Włącza w kUpdate centralkę do aktualizacji testowych (beta).</comment>
+	</info>
+	<rows>
+		<row>
+			<!-- Poniższa linijka robi dwie rzeczy:
+				 a) Dokleja do istniejącej centralki odpowiedni argument...
+				 b) Dodaje całą definicję centralki, jeżeli jej nie znajdzie 
+				-->
+			<cell id="4002" replace="#(?:http://www\.konnekt\.info/update/central\.php(?:\?(.+?))?\r?\n)|(?:(\r\n)?$)#D" limit="1">http://www.konnekt.info/update/central.php?$1&amp;beta=1&#13;&#10;$2</cell>
+		</row>
+	</rows>
+</data>

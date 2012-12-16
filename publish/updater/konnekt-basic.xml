@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<kUpdate>
+  <branch id="konnekt-basic">
+    <log><revision id="0509181646" date="2005-09-18 16:46:16"><pack id="sLibs/lib_stamina" time="1127052375"><changed>data/dll/SMemory.dll</changed></pack></revision><revision id="0509121144" date="2005-09-12 11:44:44"><pack id="sBasic/k_update" time="1119100836"><info>^ znacznie usprawniona obsługa aktualizacji</info><changed>plugins\update.dll; data\kupdate\centrals.xml</changed></pack></revision><revision id="0506171447" date="2005-06-17 14:47:10"><pack id="sBasic/UPD2" time="1102255624"><changed>upd.exe</changed></pack></revision><revision id="0506171434" date="2005-06-17 14:34:46"><pack id="sBasic/UPD2" time="1102255624"><changed>upd.exe</changed></pack></revision><revision id="0505122143" date="2005-05-12 21:43:59"><pack id="sLibs/lib_glib" time="1097340130"><changed>data/dll/libglib-2.0-0.dll</changed></pack><pack id="sLibs/lib_gthread" time="1097340548"><changed>data/dll/libgthread-2.0-0.dll</changed></pack></revision><revision id="0412212259" date="2004-12-21 22:59:11"><pack id="sBasic/k_update" time="1103666315"><changed>plugins\update.dll</changed></pack></revision><revision id="0412210102" date="2004-12-21 01:02:41"><pack id="sBasic/UPD" time="1102255624"><changed>upd.exe</changed></pack></revision><revision id="0412210059" date="2004-12-21 00:59:37"><pack id="sBasic/k_update" time="1101224351"><changed>data\kupdate\centrals.xml</changed></pack></revision><revision id="0412202145" date="2004-12-20 21:45:04"><pack id="sBasic/k_update" time="1103575211"><changed>plugins\update.dll</changed></pack></revision><revision id="0412201654" date="2004-12-20 16:54:24"><pack id="sBasic/UPD2" time="1102255624"><changed>upd.exe</changed></pack><pack id="sBasic/k_update" time="1102255349"><changed>plugins\update.dll; add\kupdate\centrals.xml</changed></pack><pack id="sLibs/lib_devil2" time="1100476485"><changed>data\dll\devil.dll; data\dll\devilu.dll; data\dll\devilut.dll</changed></pack><pack id="sLibs/lib_luaplus" time="1072178885"><changed>data/dll/luaplus.dll</changed></pack><pack id="sLibs/lib_openssl" time="1050019265"><changed>data\dll\libeay32.dll; data\dll\ssleay32.dll</changed></pack><pack id="sLibs/lib_sigc" time="1059038679"><changed>data/dll/sigc.dll</changed></pack><pack id="sLibs/lib_msvc71" time="1048047291"><changed>msvcp71.dll; msvcr71.dll</changed></pack><pack id="sLibs/lib_msvc70" time="1010234418"><changed>msvcp70.dll; msvcr70.dll</changed></pack><pack id="sLibs/lib_gnet" time="1101297039"><changed>data/dll/gnet.dll</changed></pack><pack id="sLibs/lib_iconv" time="1061833512"><changed>data/dll/iconv.dll</changed></pack><pack id="sLibs/lib_glib" time="1097340130"><changed>data/dll/libglib-2.0-0.dll</changed></pack><pack id="sLibs/lib_gthread" time="1097340548"><changed>data/dll/libgthread-2.0-0.dll</changed></pack><pack id="sLibs/lib_libxml2" time="1076605080"><changed>data/dll/libxml2.dll</changed></pack><pack id="sLibs/lib_zlib" time="1016038006"><changed>data/dll/zlib.dll</changed></pack><pack id="sLibs/lib_intl" time="1073725322"><changed>data/dll/intl.dll</changed></pack></revision><revision id="0412201653" date="2004-12-20 16:53:35"><pack id="sBasic/UPD2" time="1102255624"><changed>upd.exe</changed></pack><pack id="sBasic/k_update" time="1102255349"><changed>plugins\update.dll; add\kupdate\centrals.xml</changed></pack><pack id="sLibs/lib_devil2" time="1100476485"><changed>data\dll\devil.dll; data\dll\devilu.dll; data\dll\devilut.dll</changed></pack><pack id="sLibs/lib_luaplus" time="1072178885"><changed>data/dll/luaplus.dll</changed></pack><pack id="sLibs/lib_openssl" time="1050019265"><changed>data\dll\libeay32.dll; data\dll\ssleay32.dll</changed></pack><pack id="sLibs/lib_sigc" time="1059038679"><changed>data/dll/sigc.dll</changed></pack><pack id="sLibs/lib_gnet" time="1101297039"><changed>data/dll/gnet.dll</changed></pack><pack id="sLibs/lib_iconv" time="1061833512"><changed>data/dll/iconv.dll</changed></pack><pack id="sLibs/lib_glib" time="1097340130"><changed>data/dll/libglib-2.0-0.dll</changed></pack><pack id="sLibs/lib_gthread" time="1097340548"><changed>data/dll/libgthread-2.0-0.dll</changed></pack><pack id="sLibs/lib_libxml2" time="1076605080"><changed>data/dll/libxml2.dll</changed></pack><pack id="sLibs/lib_zlib" time="1016038006"><changed>data/dll/zlib.dll</changed></pack><pack id="sLibs/lib_intl" time="1073725322"><changed>data/dll/intl.dll</changed></pack></revision><revision id="0411031125" date="2004-11-03 11:25:59"><pack id="sBasic/k_update" time="1099477039"><changed>plugins\update.dll</changed></pack></revision><revision id="0411031106" date="2004-11-03 11:06:32"><pack id="sBasic/k_update" time="1099442820"><changed>plugins\update.dll; settings\kupdate.xml</changed></pack></revision>
+      <revision id="0411011831" date="2004-11-01 18:31:35">
+        <pack id="sBasic/UPD" time="1099316746">
+          <changed>upd.exe</changed>
+        </pack>
+        <pack id="sBasic/k_update" time="1099317106">
+          <changed>plugins\update.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_devil" time="1051216124">
+          <changed>devil.dll; ilu.dll; ilut.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_luaplus" time="1072178885">
+          <changed>luaplus.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_openssl" time="1050019265">
+          <changed>libeay32.dll; ssleay32.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_sigc" time="1059038679">
+          <changed>sigc.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_msvc71" time="1048047291">
+          <changed>msvcp71.dll; msvcr71.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_msvc70" time="1010234418">
+          <changed>msvcp70.dll; msvcr70.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_gnet" time="1079560821">
+          <changed>gnet.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_iconv" time="1061833512">
+          <changed>iconv.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_glib" time="1074288518">
+          <changed>libglib-2.0-0.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_gthread" time="1062125642">
+          <changed>libgthread-2.0-0.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_libxml2" time="1076605080">
+          <changed>libxml2.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_zlib" time="1016038006">
+          <changed>zlib.dll</changed>
+        </pack>
+        <pack id="sLibs/lib_intl" time="1073725322">
+          <changed>intl.dll</changed>
+        </pack>
+      </revision>
+    </log>
+    
+  <ignore><pack id="sBasic/k_update" time="1114689547"/></ignore></branch>
+</kUpdate>

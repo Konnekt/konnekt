@@ -1,0 +1,160 @@
+
+Standard przesy³anych danych we wtyczce update.dll
+
+ --- jêzykologia ---------------------------------------------------------------
+
+
+Wiadomoœæ - element <message> (w jednej z dwóch postaci)
+Wiadomoœæ URL - Wiadomoœæ z atrybutem action="URL" . Najpierw bêdzie "miga³" w zasobniku systemowym, dopiero po klikniêciu otworzy siê odpowiednie okno.
+Wiadomoœæ MBOX - Wiadomoœæ z atrybutem action="MBOX" . Pojawi siê od razu na ekranie, najpewniej
+	   blokuj¹c u¿ywanie programu w oczekiwaniu na wybranie akcji przez u¿ytkownika...
+Update - specjalny XML z opisem paczek do przeprowadzania aktualizacji
+
+
+
+ --- komunikacja - wysy³ane z programu -----------------------------------------
+
+
+
+Wtyczka wysy³a zapytanie (POST) do tzw. Centralki z nast. parametrami:
+
+last   - ostatnio zwrócona przez serwer wartoœæ info/this/@id
+global - ostatnio zwrócona przez serwer wartoœæ info/this/@global
+request - rz¹danie ponownego przes³ania ostatnich informacji:
+          "" - brak rz¹dania (wtedy, gdy wysy³a automat), wysy³amy tylko rzeczy, których u¿ytkownik NIE widzia³
+          "CHECK" "VERSIONINFO" , "MOTD" , "MSG" , "UPDATE"
+read   - lista (oddzielana przecinkami) identyfikatorów przeczytanych komunikatów (mo¿e byæ ich ograniczona iloœæ!). Na razie nie jest przekazywane...
+version - informacja o wersjach zamontowanych wtyczek i CORE'a:
+		ID=wersja\n
+betaLogin - login do konta beta
+betaPass - haslo do konta beta jako MD5(host_centralki + MD5(haslo))
+
+
+
+ --- jêzykologia - wysy³ane z serwera ------------------------------------------
+
+
+
+<?xml version="1.0" encoding="windows-1250"?>
+<info>
+
+	<!-- 
+	Informacja o centralce... (Mo¿e znajdowaæ siê równie¿ na koñcu XML'a, ale lepiej, ¿eby by³a pierwsza)
+		id			- informacja do przechowania lokalnie w profilu Konnekta. Przy nastêpnym zapytaniu dostaniemy j¹ w $_POST['last']
+		global		- informacja do przechowania globalnie w profilu u¿ytkownika systemu. Przy nastêpnym zapytaniu dostaniemy j¹ w $_POST['global']
+		name		- nie zmieniajacy sie prosty identyfikator. Dozwolone tylko znaki a-z , 0-9 i '_'
+		title		- nazwa centralki do wyœwietlania we wszystkich komunikatach
+	-->
+    <this id="" global="" time="" name="" title=""/>
+
+	<!-- 
+	Wiadomoœci
+	Atrybuty:
+		type			- Typ wiadomoœci (UPDATE , MSG , MOTD , VERSIONINFO)
+		action="URL"	- mryga ikonk¹ w zasobniku. Po jej klikniêciu pokazuje treœæ wiadomoœci i po klikniêciu OK otwiera adres url
+		action="MBOX"   - od razu otwiera MessageBox z treœci¹ wiadomoœci
+		style           - Styl wiadomoœci (INFORM, WARN, ERROR) - dzia³a tylko z MBOX
+		url				- adres url do otwarcia po przeczytaniu wiadomoœci (wymagany w URL)
+		time			- [opcjonalnie] czas wstawienia komunikatu do systemu
+		id				- [opcjonalnie] identyfikator komunikatu
+	Np.:
+	-->
+	<message type="MOTD" action="URL" title="To jest MOTD!" url="http://www.konnekt.info/MOTD">Treœæ wiadomoœci</message>
+	<message id="msg_1" type="MSG" action="URL" title="To jest wiadomoœæ bez treœci, ale za to miga w trayu" url="http://www.stamina.eu.org/konnekt/"/>
+	<message type="VERSIONINFO" action="MBOX" style="ERROR" title="Koniecznie zrób UPDATE!">Error Box</message>
+
+	<!--
+    Adresy XMLi z definicjami paczek
+    url		- adres sieciowy pliku .xml z definicjami...
+    time	- czas ostatniej modyfikacji tego pliku
+    title	- tytu³ do wyœwietlenia podczas pobierania pliku
+    -->
+    <update url="http://sdsdsdssds.xml" time="" title=""/>
+</info>
+
+
+
+ --- uwagi ---------------------------------------------------------------------
+
+
+
+Jak to zaimplementowaæ?
+
+Centralka ma za zadanie okreœlaæ CO nale¿y u¿ytkownikowi przedstawiæ i w JAKIEJ
+formie. Przy pomocy odpowiedniej manipulacji identyfikatorów jest to zadanie
+wzglêdnie proste...
+
+W <this id=""> (jak i w global) najwygodniej przechowywaæ "sesjê" u¿ytkownika.
+Czyli informacje o tym, jaka by³a np. ostatnia wiadomoœæ wys³ana do usera 
+(¿eby nie wys³aæ mu jej ponownie), jak¹ datê mia³ plik definicji paczek, 
+znów, ¿eby nie wysy³aæ ponownie tego samego itd.
+
+W PHP najwygodniej zrobiæ to tak:
+$LAST = unserialize(@$_POST['last']);
+$GLOBAL = unserialize(@$_POST['global']);
+...
+wrzucamy nowe komunikaty i aktualizujemy dane w $LAST i $GLOBAL
+...
+echo '<this id="'.htmlspecialchars(serialize($LAST)).'" global="'.htmlspecialchars(serialize($GLOBAL)).'"/>';
+
+Nale¿y przy tym pamiêtaæ, ¿e wysy³any xml musi byæ absolutnie poprawny, 
+atrybuty MUSZ¥ byæ w cudzys³owach, a wszystkie znaki specjalne musz¹ zostaæ
+escape'owane (< na &lt; > na &gt; " na &quot;)
+
+URL do centralki powinien byæ wzglêdnie sta³y. Przy ka¿dej jego zmianie zostan¹
+utracone wartoœci zmiennych last, global i read!
+URL rozró¿niany jest do znaku '?'. Mo¿na wiêc dowolnie zmieniaæ przekazywane
+parametry.
+
+
+kUpdate wykorzystuje Cookies z IE. T¹ drog¹ mo¿na po³¹czyæ centralkê
+z przegl¹dark¹ (tylko IE)...
+
+Atrybut time mo¿e przyjmowaæ wartoœci w dwóch formatach:
+RRRR-MM-DD GG:MM
+lub
+zgodny z poleceniem time() (PHP, C) i _time64() (MSVC)
+
+Centralka s³u¿y przede wszystkim do przekazywania adresów do plików Update.
+Przekazywanie wiadomoœci s³u¿y raczej do przekazywania linków do wa¿nych 
+informacji, lub zasobów zale¿nych od u¿ywanych wersji/zestawów wtyczek...
+
+
+
+ --- w praktyce ----------------------------------------------------------------
+
+
+
+Za³ó¿my ¿e mamy na serwerze bazê wiadomoœci MOTD (Message Of The Day) posortowanych
+chronologicznie i plik Update. Zanim wyœlemy je u¿ytkownikowi trzeba sprawdziæ 
+kilka rzeczy:
+  1. Czy zapytanie wys³a³ automat? $_POST['request'] == ""
+     TAK - wszystkie wiadomoœci wstawiamy jako URL
+     NIE - wstawiamiy je jako MBOX . Dodatkowo, je¿eli nic nie znajdziemy, 
+           warto wstawiæ jeden MBOX i informacj¹, ¿e nic nie zosta³o
+           znalezione...
+  2. Czego klient rz¹da?
+	 W $_POST['request'] znajdziemy informacjê o tym, co u¿ytkownik zamawia...
+	 '' (puste) - zapytanie automatyczne. Wstawiamy jako URL tylko to, co nowe
+	 "CHECK" - Wstawiamy tylko to, co nowe, ale jako MBOX
+	 Dla obu powy¿szych wstawiamy nowoœci ze wszystkich "gatunków". W naszym
+	 przyk³adzie bêd¹ to wiadomoœci MOTD i plik Update...
+	
+	 Request mo¿e byæ równie¿ po³¹czeniem poni¿szych ci¹gów.
+	 Obowi¹zuje zasada wyœwietlania: 
+	  - Wszystkie nowoœci + 1 ostatnia (ew. z ca³ego 1 dnia), nawet jeœli by³a czytana
+	  - Je¿eli nie prowadzimy bazy danego typu komunikatów - zawsze wyœwietlamy informuj¹cy o tym MBOX
+	 "VERSIONINFO" - Najlepiej wstawiæ MBOX z adresem strony z informacj¹ o najnowszej wersji
+	 "MSG" - Wiadomoœci skierowane konkretnie do danego u¿ytkownika (chocia¿by u¿ytkownika konkretnej wersji wtyczki)
+     "MOTD" - Komunikaty dnia...
+     "UPDATE" - Zawsze wstawiamy znacznik z adresem pliku Update (<update...>)
+  3. Jak okreœliæ co by³o ju¿ czytane?
+     Z pomoc¹ przychodzi $LAST i $GLOBAL omówione wczeœniej...
+     Po wstawieniu wiadomoœci do $LAST wstawiamy o tym informacjê:
+     $LAST['ostatni_MOTD'] = $czas_ostatniego_wstawione_MOTD;
+     Nastêpnym razem, sprawdzaj¹c $LAST poka¿emy tylko nowsze wiadomoœci
+     (chyba ¿e klient za¿yczy sobie równie¿ jedn¹ ostatni¹!)
+     
+     Je¿eli chcemy mieæ absolutn¹ pewnoœæ, mo¿emy u¿yæ atrybutu id. Ale jako
+     ¿e z braku czasu i ogólnej potrzeby jego u¿ywania nie zosta³ zaimplementowany :)
+     Daj znaæ, je¿eli oka¿e siê bardzo potrzebny...

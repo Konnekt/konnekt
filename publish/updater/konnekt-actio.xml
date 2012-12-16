@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<kUpdate>
+  <branch id="konnekt-actio">
+    <log><revision id="0602090112" date="2006-02-09 01:12:58"><pack id="sActio/k_actio" time="1139442799"><info>+ poprawka kolejności wtyczek na liście statusów</info><changed>plugins/actio.dll</changed></pack></revision><revision id="0602081806" date="2006-02-08 18:06:01"><pack id="sActio/k_actio_data" time="1139274565"><changed>data\actio\gauge_border.png; data\actio\gauge_gauge.png; data\actio\gauge_thumb.png</changed></pack></revision><revision id="0602081748" date="2006-02-08 17:48:17"><pack id="sActio/k_actio" time="1139417215"><info>^ dla kontaktów bez sieci domyślną akcją jest sms (opcja)
++ załóż konto otwiera konfigurację
++ przy zamykaniu okna zamyka "wykręcane" połączenie
+^ poprawki w oknie kalibracji - układ kontrolek, wyłączanie wyciszeń, wybór urządzenia nagrywającego, wzmocnienia, oraz odsłuchu
++ gdy port jest zajęty, próbuje użyć wyższego
++ zunifikowane: "użyj" -&gt; "wykręć"
+^ nowe rozmiary i wygląd suwaków głośności
++ poprawka zawieszania przy braku łączności z siecią
++ gdy serwer wysyła dźwięk w trakcie dzwonienia - odtwarza go (komunikaty o braku środków)</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0602041644" date="2006-02-04 16:44:10"><pack id="sActio/k_actio" time="1139012305"><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0602010235" date="2006-02-01 02:35:07"><pack id="sActio/k_actio" time="1138756668"><info>+ poprawki blokowania okna</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack><pack id="sActio/k_actio_data" time="1138757635"><changed>data\actio\banner_options.png; data\actio\banner_window.png</changed></pack></revision><revision id="0601310032" date="2006-01-31 00:32:22"><pack id="sActio/k_actio" time="1138659120"><info>+ poprawka zapętlania po dodaniu/usunięciu karty dźwiękowej
+^ można zmieniać karty graficzne bez restartu
++ poprawka krytyka przy wyłączonych kartach sieciowych
++ poprawki ponownego łączenia
+&gt; możliwość szybkiego zamknięcia powiadomień
+^ paski głośności blokują się na środku
++ kilka poprawek stabilności</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack><pack id="sActio/k_actio_data" time="1138357396"><changed>data\actio\banner_options.png; data\actio\info_close.png</changed></pack></revision><revision id="0511161501" date="2005-11-16 15:01:29"><pack id="sActio/k_actio" time="1132149444"><info>+ poprawka deadlock'ów</info><changed>plugins/actio.dll</changed></pack></revision><revision id="0511161206" date="2005-11-16 12:06:20"><pack id="sActio/k_actio" time="1132138966"><info>+ znaczna ilość poprawek i usprawnień biblioteki
++ problemy z DTMF</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0506041542" date="2005-06-04 15:42:26"><pack id="sActio/k_actio" time="1117891429"><info>- włączona obsługa poziomu dźwięku, oraz Jitter Buffer
++ poprawki problemów z wielokrotnie odrzuconymi połączeniami</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505242343" date="2005-05-24 23:43:57"><pack id="sActio/k_konnekt" time="1116970869"><info>- łapanie pure virtual call</info><changed>konnekt.exe</changed></pack><pack id="sActio/k_actio" time="1116970509"><info>- jak wyżej</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505241916" date="2005-05-24 19:16:33"><pack id="sActio/k_actio" time="1116954920"><info>- CHYBA nie powinien sie juz krytykowac</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505231412" date="2005-05-23 14:12:46"><pack id="sActio/k_konnekt" time="1116804267"><changed>konnekt.exe</changed></pack><pack id="sActio/k_actio" time="1116847526"><info>- wersja bez optymalizacji... u mnie jakby stabilna...</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505230107" date="2005-05-23 01:07:30"><pack id="sActio/k_actio" time="1116803204"><changed>data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505230045" date="2005-05-23 00:45:03"><pack id="sActio/k_actio" time="1116797652"><info>+ wylaczony RTCP... i tak nie ma QOS wiec jest zbedny
++ nie dzialaja mierniki i ustawienie mocy dzwieku... BEDZIE WYWALAL INFO ZE NIE DZIALA MIKROFON!!!</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505222059" date="2005-05-22 20:59:13"><pack id="sActio/k_actio" time="1116787976"><info>+ poprawka błędu logicznego przy zamykaniu (mógł, ale nie musiał powodować krytyki)
+- wyłączony Jitter ... sprawdzamy stabilność</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505212333" date="2005-05-21 23:33:53"><pack id="sActio/k_actio" time="1116711200"><changed>plugins/actio.dll</changed></pack></revision><revision id="0505212325" date="2005-05-21 23:25:02"><pack id="sActio/k_actio" time="1116710464"><info>&gt; Pobiera prawdziwy stan konta z serwera
+^ Jeszcze drobny redesign okna ustawien po testach na ludziach ;)
++ Poprawka łączenia przy braku ustawień
++ Poprawka uruchamiania kalibracji przy braku ustawień
+&gt; Kopiowanie numerów telefonów pod prawym przyciskiem
+&gt; Menu kontekstowe elementu rozmowy
++ Trochę kolejnych poprawek z blokowaniem</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505202250" date="2005-05-20 22:50:24"><pack id="sActio/k_konnekt" time="1116619100"><info>&gt; uruchomienie z -debugall wlaczy pelne logowanie
++ poprawka zmiany statusow</info><changed>konnekt.exe</changed></pack><pack id="sActio/k_actio" time="1116622175"><info>^ przebudowany ekran ustawień... tym razem już ostatecznie. Nowa grafika w oknie rozmowy i panelu ustawień
++ poprawione otwieranie okna bez aktywnego połączenia
++ podpięte url'e pod przyciski
++ zapamiętuje ostatnio wybrany numer po zamknięciu
++ rozwiązane problemy z wieszaniem podczas łączenia
+- testować, testować, testować...</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack><pack id="sActio/k_actio_data" time="1116445920"><changed>data\actio\banner_options.png; data\actio\banner_window.png</changed></pack></revision><revision id="0505161146" date="2005-05-16 11:46:40"><pack id="sActio/k_actio" time="1116235331"><changed>plugins/actio.dll</changed></pack></revision><revision id="0505161033" date="2005-05-16 10:33:34"><pack id="sActio/k_konnekt" time="1116203824"><changed>konnekt.exe</changed></pack><pack id="sActio/k_actio" time="1116203850"><info>&gt; Menu kontekstowe dla kontaktów
++ Poprawki</info><changed>plugins/actio.dll</changed></pack></revision><revision id="0505151738" date="2005-05-15 17:38:52"><pack id="sActio/k_actio" time="1116171482"><changed>plugins/actio.dll</changed></pack></revision><revision id="0505151722" date="2005-05-15 17:22:56"><pack id="sActio/k_konnekt" time="1116169245"><info>- juz nie pamietam :)</info><changed>konnekt.exe; ui.dll</changed></pack><pack id="sActio/k_actio" time="1116170348"><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505131043" date="2005-05-13 10:43:32"><pack id="sActio/k_actio" time="1115973768"><changed>data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505131040" date="2005-05-13 10:40:51"><pack id="sActio/k_actio" time="1115973569"><info>+ kompresor / expander dźwięku . Do sterowania nim służą suwaki w oknie rozmowy (zamiast ustawiania głośności karty dźwiękowej)
++ suwak mikrofonu jest już w całości
++ test w kreatorze dźwięku
+- dołączyłem JitterBuffer, zobaczymy co się będzie działo
++ suwaki głośności nie ruszają się po najechaniu na nie z wciśniętym klawiszem myszy</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505120204" date="2005-05-12 02:04:48"><pack id="sActio/k_konnekt" time="1115853984"><changed>ui.dll</changed></pack></revision><revision id="0505120201" date="2005-05-12 02:01:18"><pack id="sActio/k_konnekt" time="1115856044"><changed>konnekt.exe</changed></pack><pack id="sActio/k_actio" time="1115853997"><info>^ znaczna przebudowa obsługi komunikacji z biblioteką
+^ poprawki obsługi wątków
++ opcje ustalające czy okienko ma automatycznie wyskakiwać przy nowym połączeniu
++ dodatkowa pozycja w menu statusów Actio
+^ przebudowane automatyczne łączenie podczas wybierania numeru. Już nie blokuje!
++ poprawione zwiechy podczas łączenia i braku sieci
++ przeformatowane okno kreatora dźwięku</info><changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed></pack></revision><revision id="0505101112" date="2005-05-10 11:12:46"><pack id="sActio/k_actio" time="1115716327"><changed>plugins/actio.dll</changed></pack></revision><revision id="0505101104" date="2005-05-10 11:04:46"><pack id="sActio/k_actio" time="1115715878"><changed>plugins/actio.dll</changed></pack></revision>
+      <revision id="0505101048" date="2005-05-10 10:48:56">
+        <pack id="sActio/k_konnekt" time="1115581180">
+          <info>+ kolejne zmiany w łapaniu błędów</info>
+          <changed>konnekt.exe</changed>
+        </pack>
+        <pack id="sActio/k_actio" time="1115714579">
+          <info>+ banery w ustawieniach i oknie "telefonu"... GRAFIKA BĘDZIE INNA!
++ uaktualnione ikonki... teraz to już chyba wszystkie...
++ dalsze próby ze wzmocnieniem stabilności</info>
+          <changed>plugins/actio.dll; data\dll\sipXtapi.dll</changed>
+        </pack>
+        <pack id="sActio/k_actio_data" time="1115678495">
+          <changed>data\actio\arch_busy.png; data\actio\arch_in.png; data\actio\arch_missed.png; data\actio\arch_out.png; data\actio\arch_rejected.png; data\actio\arch_unanswered.png; data\actio\banner_options.png; data\actio\banner_window.png; data\actio\busy.wav; data\actio\button_account.png; data\actio\button_answer.png; data\actio\button_answer_dis.png; data\actio\button_balance.png; data\actio\button_clear.png; data\actio\button_delete.png; data\actio\button_drop.png; data\actio\button_drop_dis.png; data\actio\button_help.png; data\actio\button_hold.png; data\actio\button_info.png; data\actio\button_options.png; data\actio\button_place.png; data\actio\button_place_dis.png; data\actio\button_recall.png; data\actio\button_recall_dis.png; data\actio\button_reject.png; data\actio\calib_top.png; data\actio\call_alerting.png; data\actio\call_alerting_out.png; data\actio\call_dial.png; data\actio\call_failed.png; data\actio\call_finished.png; data\actio\call_in.png; data\actio\call_missed.png; data\actio\call_offering.png; data\actio\call_onhold.png; data\actio\call_out.png; data\actio\call_retry.ico; data\actio\call_unanswered.png; data\actio\coll_contract.png; data\actio\coll_expand.png; data\actio\coll_expandmore.png; data\actio\gauge_border.png; data\actio\gauge_gauge.png; data\actio\gauge_thumb.png; data\actio\info_archiveempty.png; data\actio\info_bookempty.png; data\actio\info_connecting.png; data\actio\info_mic.png; data\actio\info_notconfigured.png; data\actio\info_quality.png; data\actio\info_sound.png; data\actio\logo.png; data\actio\logo_48.png; data\actio\mic.png; data\actio\mic_off.png; data\actio\pb_in.png; data\actio\pb_out.png; data\actio\pb_phones.png; data\actio\phone_home.png; data\actio\phone_mobile.png; data\actio\phone_pstn.png; data\actio\phone_sip.png; data\actio\phone_work.png; data\actio\quality.png; data\actio\quality_border.png; data\actio\quality_gauge.png; data\actio\spk.png; data\actio\spk_off.png; data\actio\test.wav; sounds\phonealert.wav; sounds\phonefailed.wav</changed>
+        </pack>
+      </revision>
+    </log>
+    
+  <ignore/></branch>
+</kUpdate>

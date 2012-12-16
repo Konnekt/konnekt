@@ -1,0 +1,2 @@
+php konnekt.php
+pause

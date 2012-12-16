@@ -1,0 +1,2 @@
+php prepare.php
+pause

@@ -1,0 +1,7 @@
+Library sources.
+
+  To use include <sigc++/sigc++.h> in your source.
+  Some headers are built from macros.
+
+  See signals for copyright notice.
+
