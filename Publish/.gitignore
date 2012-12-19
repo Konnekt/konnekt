@@ -1,0 +1,13 @@
+/_*/
+!/___trunk
+/debug
+/maps
+/msvc
+/stare
+/test
+/updater/backup
+/updater3
+/*.exp
+/*.lib
+*.bck
+*.bak
