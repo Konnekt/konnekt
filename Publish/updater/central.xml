@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<info>
+
+  <this id=" " global="" name="Konnekt" title="Konnekt"/>
+
+	<mirror id="m2" url="http://dl.konnekt.info/update/" priority="1"/>
+
+  <update url="data-basic.xml" title="Konnekt-kUpdate" always="1" extern="1" checktime="0" mirror=""/>
+  <update url="data.xml" title="Konnekt" onoption="main" checktime="1"/>
+  <update url="data-beta.xml" title="Konnekt-Beta" onoption="beta" checktime="1"/>
+  <update url="data-sdk.xml" title="Konnekt-SDK" onoption="sdk" checktime="1"/>
+
+</info>
