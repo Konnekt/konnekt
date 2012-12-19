@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>Elektro</name>   
+    <author>Torn: [th++|stamina]</author>
+    <url>http://www.torn.kliper.eu.org</url>
+    <comment>użyte programy: FM7, CoolEdit. (c)2002 Torn.</comment>
+
+    <events>
+              <msgSent>elektro\msgsent.wav</msgSent>
+               <newMsg>elektro\newmsg.wav</newMsg>
+            <newMsgAct>elektro\newmsg_act.wav</newMsgAct>
+          <newMsgInact>elektro\newmsg_inact.wav</newMsgInact>
+       <newServerEvent>elektro\newserverevent.wav</newServerEvent>
+              <newUser>elektro\newuser.wav</newUser>
+           <quickEvent>elektro\quickevent.wav</quickEvent>
+    </events>
+</sound>

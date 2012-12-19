@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>s p e e d F r e a k</name>   
+    <author>Torn: [th++|stamina]</author>
+    <url>http://www.torn.kliper.eu.org</url>
+    <comment>wooooooooooooooooooosh! >>> na podstawie 'Ballistics'.</comment>
+
+    <events>
+              <msgSent>speedfreak\msgsent.wav</msgSent>
+               <newMsg>speedfreak\newmsg.wav</newMsg>
+            <newMsgAct>speedfreak\newmsg_act.wav</newMsgAct>
+          <newMsgInact>speedfreak\newmsg_inact.wav</newMsgInact>
+       <newServerEvent></newServerEvent>
+              <newUser>speedfreak\newuser.wav</newUser>
+           <quickEvent></quickEvent>
+    </events>
+</sound>

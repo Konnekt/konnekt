@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>Voyager</name>   
+    <author>Torn: [th++|stamina]</author>
+    <url>http://www.torn.kliper.eu.org</url>
+    <comment>dźwięki pochodzą z gry Star Trek Voyager: Elite Force</comment>
+
+    <events>
+              <msgSent>voyager\msgsent.wav</msgSent>
+               <newMsg>voyager\newmsg.wav</newMsg>
+            <newMsgAct>voyager\newmsg_act.wav</newMsgAct>
+          <newMsgInact>voyager\newmsg_inact.wav</newMsgInact>
+       <newServerEvent>voyager\newserverevent.wav</newServerEvent>
+              <newUser>voyager\newuser.wav</newUser>
+           <quickEvent>voyager\quickevent.wav</quickEvent>
+    </events>
+</sound>

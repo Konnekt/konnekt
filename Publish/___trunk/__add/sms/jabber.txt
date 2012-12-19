@@ -1,0 +1,3 @@
+Prefix skyptu to: "jid:", "jab:", "wpk:", "jabber:" i chyba tyle :)
+wrazie problemów pisac na moje gg# 309097 :)
+u¿ycie w polu nr telefonu wpisujemy prefix(który chcesz) i po nim adres u¿yszkodnika docelowego czyli np "jid:olorin@chrome.pl" oczywiœcie bez cudzys³owów

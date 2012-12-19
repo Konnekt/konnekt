@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>Time Squad</name>   
+    <author>Torn: [th|stamina]</author>
+    <url>http://www.torn.kliper.eu.org</url>
+    <comment>użyte programy: DScaler, CoolEdit. (c)2003 Torn^Stamina.</comment>
+
+    <events>
+              <msgSent>time-squad\msgsent.wav</msgSent>
+               <newMsg>time-squad\newmsg.wav</newMsg>
+            <newMsgAct>time-squad\newmsg_act.wav</newMsgAct>
+          <newMsgInact>time-squad\newmsg_inact.wav</newMsgInact>
+       <newServerEvent>time-squad\newserverevent.wav</newServerEvent>
+              <newUser>time-squad\newuser.wav</newUser>
+    </events>
+</sound>

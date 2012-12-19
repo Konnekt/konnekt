@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sms>
+  <!-- Definicja bramki WWW do wysylania smsów 
+  Definicje wczytywane s± podczas uruchamiania wtyczki.
+  Każdorazowe wysłanie sms'a powoduje uruchomienie pliku ze skryptem.
+  -->
+  <id>jabber</id>
+  <name>Jabber (z twojego konta)</name>  <!-- Nazwa operatora -->
+  <logo>jabber.ico</logo> <!-- plik z logiem. Przyjmowane s± TYLKO .ico -->
+  <author>Olórin</author>  <!-- Autor definicji i skryptu -->
+  <version>0.0.0.0.0.0.6</version>  <!-- Wersja -->
+  <info>Musisz wpisac w konfiguracji dane swojego konta jabber!!</info> <!-- Dodatkowe info -->
+  <authorURL></authorURL> <!-- URL zwi±zany z autorem -->
+  <gateURL>http://jab.moon.net.pl/</gateURL> <!-- URL zwi±zany z bramk± -->
+  <acceptNumber>(jab|jabber|jid|wpk):[^@]+@[^@]+</acceptNumber>  <!-- Wyrażenie regularne definiuj±ce obsługiwane numery 
+                                                      znak '/' MUSI być escape'owany przez '\' -->
+  <scriptFile>jabber.lua</scriptFile> <!-- Plik ze skryptem. Suportowany jest język 
+									    LUA (http://www.lua.org/)
+										  *.lua (skrypt) i *.luac (wersja skompilowana)
+										-->
+  <maxChars>999999999</maxChars>			<!-- Maksymalna liczba znaków na SMSa -->
+  <maxSendCount></maxSendCount> <!-- Liczba możliwych wysłań przez bramke 
+									po przekroczeniu tej liczby zostanie wy¶wietlone ostrzeżenie.	-->
+  <maxParts>1</maxParts>		<!-- Na ile sms'ów można podzielić jeden tekst . 
+									Jeżeli bramka, lub skrypt dzieli sam - trzeba podać 1-->
+  <maxCharsOnServer>9999999</maxCharsOnServer>	<!-- Maksymalna liczba znaków na SMSa, ktora przyjmuje serwer podczas wysylani
+												Do ustawienia tylko gdy maxParts jest jeden, lub 0 -->
+ <params>   <!-- Lista parametrów przekazywanych do skryptu, które mog± być edytowane w konfiguracji -->
+  			 <!-- atrybuty do param 
+  					name - nazwa zmiennej
+  					type - typ - 'string'|'int'|'text'|'bool'|'pass'
+			  -->
+     <param name="jid" type="string">Login</param>
+     <param name="pass" type="pass">Hasło</param>
+     <param name="serwer" type="string" default="jabber.gda.pl">Serwer</param>
+     <param name="port" type="int" default="5222">Port(zazwyczaj 5222)</param>	
+  </params>	
+</sms>

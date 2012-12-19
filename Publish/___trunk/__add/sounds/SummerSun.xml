@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>Summer Sun</name>   
+    <author>torn</author>
+    <url>http://www.th7.org</url>
+    <comment>(c)2003 torn^stamina.</comment>
+    <events>
+              <msgSent>summersun\null.wav</msgSent>
+               <newMsg>summersun\newmsg.wav</newMsg>
+            <newMsgAct>summersun\newmsg_act.wav</newMsgAct>
+          <newMsgInact>summersun\newmsg_inact.wav</newMsgInact>
+       <newServerEvent>summersun\newserverevent.wav</newServerEvent>
+              <newUser>summersun\newuser.wav</newUser>
+           <quickEvent>summersun\quickevent.wav</quickEvent>
+         <fileReceived>summersun\filereceived.wav</fileReceived>
+         <fileFinished>summersun\filefinished.wav</fileFinished>
+    </events>
+</sound>

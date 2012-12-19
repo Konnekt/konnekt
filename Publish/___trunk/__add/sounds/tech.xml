@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<sound>
+    <name>Tech</name>   
+    <author>Torn: [th++|stamina]</author>
+    <url>http://www.torn.kliper.eu.org</url>
+    <comment>dźwięki pochodzą z gry Star Trek Voyager: Elite Force</comment>
+
+    <events>
+              <msgSent>tech\msgsent.wav</msgSent>
+               <newMsg>tech\newmsg.wav</newMsg>
+            <newMsgAct>tech\newmsg_act.wav</newMsgAct>
+          <newMsgInact>tech\newmsg_inact.wav</newMsgInact>
+       <newServerEvent>tech\newserverevent.wav</newServerEvent>
+              <newUser>tech\newuser.wav</newUser>
+           <quickEvent>tech\quickevent.wav</quickEvent>
+    </events>
+</sound>
