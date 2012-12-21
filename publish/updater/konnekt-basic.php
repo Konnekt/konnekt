@@ -14,7 +14,7 @@ showWelcome();
 
 define('DIR' , '..\\');
 
-$DATA_DIR = 's:/home/konnekt/update/data/basic/';
+$DATA_DIR .= 'basic/';
 //$DATA_DIR = 'data/';
 $BACKUP_DIR = 'backup/';
 

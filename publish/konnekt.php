@@ -12,7 +12,7 @@ function getVersion($file , $type = 'n')
 } 
 
 $VERSION = getVersion("__main\\konnekt.exe", 't');
-$OUTDIR = "s:/home/konnekt/files/download/";
+$OUTDIR = "s:/home/konnekt/public_html/download/";
 $BASEDIR = dirname(__FILE__);
 // --------------
 
@@ -22,8 +22,8 @@ $BASEDIR = dirname(__FILE__);
 passthru (NSIS_DIR." /DoutDir=$OUTDIR /DnoExtra /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi");  
 //passthru (NSIS_DIR." /DoutDir=$OUTDIR /DnoExtra /DActio /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi");  
 //passthru (NSIS_DIR." /DoutDir=$OUTDIR /DoutName=actio_full_ /DnoExtra /DActio /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi");  
-passthru (NSIS_DIR." /DoutDir=$OUTDIR /DoutName=actio_ /DnoPlugs /DnoExtra /DActio  /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi");  
-passthru (NSIS_DIR." /DoutDir=$OUTDIR /DoutName=mini_ /DnoPlugs /DnoExtra /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi ");  
+//passthru (NSIS_DIR." /DoutDir=$OUTDIR /DoutName=actio_ /DnoPlugs /DnoExtra /DActio  /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi");  
+//passthru (NSIS_DIR." /DoutDir=$OUTDIR /DoutName=mini_ /DnoPlugs /DnoExtra /DbaseDir=$BASEDIR\\___trunk /DPRODUCT_VERSION=".$VERSION." ___trunk\\konnekt.nsi ");  
 
 //passthru (NSIS_DIR." /DoutDir=$OUTDIR /DActio /DnoExtra /DoutName=actio_ /DPRODUCT_VERSION=".$VERSION." konnekt.nsi ");  
 

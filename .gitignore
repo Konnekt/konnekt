@@ -16,9 +16,11 @@ thumbs.db
 /depends/stamina.lib_0.7
 /depends/Lib
 /doc/html
+/doc/*.chm
 /debug
 /output
 /release
 /source
 /temp
 /test
+

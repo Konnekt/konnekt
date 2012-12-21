@@ -67,7 +67,6 @@ showWelcome();
 
 define('DIR' , '..\\___trunk\\');
 
-$DATA_DIR = 's:/home/konnekt/update/data/';
 //$DATA_DIR = 'data/';
 $BACKUP_DIR = 'backup/';
 

@@ -15,6 +15,8 @@ if (@$optOld) {
 //  $optRebuild = true;
 }
 
+$DATA_DIR = 's:/home/konnekt/public_html/update/data/';
+
 $UPDATE_URL = "";
 //$UPDATE_URL = "http://test.konnekt.info/update/";
 
