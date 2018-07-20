@@ -48,8 +48,8 @@ robiona była jeszcze pod Visual C++ Standard.
 Jako że biblioteki są stare (wersje z 2003-2007 roku), wrzuciłem je na serwer i do repo...
 
 - Kilka mniejszych znajduje się w katalogu /depends/
-- [Biblioteki własne](http://www.konnekt.info/sdk-files/lib.zip) - kompilowane ze źródeł
-- [Biblioteki dodatkowe](http://www.konnekt.info/sdk-files/)
+- [Biblioteki własne](http://konnekt.stamina.pl/sdk-files/lib.zip) - kompilowane ze źródeł
+- [Biblioteki dodatkowe](http://konnekt.stamina.pl/sdk-files/)
 
 ## Licencja
 
