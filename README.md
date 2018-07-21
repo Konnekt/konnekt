@@ -53,7 +53,7 @@ Jako że biblioteki są stare (wersje z 2003-2007 roku), wrzuciłem je na serwer
 
 ## Licencja
 
-Kod udostępniony jest na licencji Mozilla (MPL). Jej treść znajdziecie w pliku [LICENSE.txt](LICENSE.txt)
+Kod udostępniony jest na licencji Mozilla (MPL). Jej treść znajdziecie w pliku [LICENSE](LICENSE)
 
 ## Disclaimer
 
