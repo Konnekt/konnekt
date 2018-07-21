@@ -58,5 +58,3 @@ Kod udostępniony jest na licencji Mozilla (MPL). Jej treść znajdziecie w plik
 ## Disclaimer
 
 This is a legacy project, published mainly for amusement. And partly for those, that are still using the Konnekt IM. It's terribly outdated, and was never designed for open source . Keep this in mind, please.
-
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/bf1be781c6854377b94012a36ca23f22 "githalytics.com")](http://githalytics.com/Konnekt/konnekt)
